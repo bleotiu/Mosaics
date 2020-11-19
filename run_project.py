@@ -61,7 +61,6 @@ for file in filenames:
     params.criterion = criteria
     mosaic = build_mosaic(params)
     cv.imwrite(name + '_' + size.__str__() + '_random.png', mosaic)
-    break
 
 #(c)
 size = 100
