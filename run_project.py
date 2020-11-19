@@ -27,7 +27,7 @@ hexagons = [False, True]
 neighbours = [False, True]
 
 start_time = timeit.default_timer()
-"""
+
 #(a)
 for file in filenames:
     for size in sizes:
@@ -45,12 +45,11 @@ for file in filenames:
         mosaic = build_mosaic(params)
         cv.imwrite(name + '_' + size.__str__() + '_caroiaj.png', mosaic)
         
-"""
+
 #(b)
 size = 100
 for file in filenames:
-    # file_name, name = file
-    file_name, name = './../data/imaginiNoi/pinguini.jpg', 'penguins'
+    file_name, name = file
     params = Parameters(file_name)
     params.small_images_dir = small_images_path
     params.image_type = 'jpg'
@@ -63,7 +62,7 @@ for file in filenames:
     mosaic = build_mosaic(params)
     cv.imwrite(name + '_' + size.__str__() + '_random.png', mosaic)
     break
-"""
+
 #(c)
 size = 100
 for file in filenames:
@@ -151,7 +150,7 @@ for file in filenames:
     params.criterion = criteria
     mosaic = build_mosaic(params)
     cv.imwrite(name + '_' + size.__str__() + '_hexagoane_different_neighbours.png', mosaic)
-"""
+
 end_time = timeit.default_timer()
 print('Entire Project running time: %f s.' % (end_time - start_time))
 
